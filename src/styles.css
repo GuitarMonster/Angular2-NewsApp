@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+@import '/node_modules/@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+/* @import 'custom-blue-theme.scss'; */
+
+body {
+	margin: 0;
+}
+

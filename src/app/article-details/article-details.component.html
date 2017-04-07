@@ -1,0 +1,16 @@
+<md-card>
+    <md-card-title>{{article.title}}</md-card-title>
+    <md-card-subtitle>
+        <span>{{article.author}}</span>
+        <span class="article-date">{{article.publishedDate | date:'medium'}}</span>
+    </md-card-subtitle>
+    <md-card-content>
+        <div class="article-img-container">
+            <img md-card-image src="{{article.urlToImage}}">
+        </div>
+        <p>{{article.description}}</p>
+    </md-card-content>
+    <md-card-actions>
+        <a md-button class="article-link" href="{{article.url}}" target="blank">See full article</a>
+    </md-card-actions>
+</md-card>

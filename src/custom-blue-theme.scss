@@ -1,0 +1,10 @@
+@import '~@angular/material/core/theming/all-theme';
+@include mat-core();
+
+$custom-blue-primary: mat-palette($mat-blue, A400, A700, 500);
+$custom-blue-accent:  mat-palette($mat-light-blue, 200, 800, A300);
+
+
+$custom-blue-theme: mat-light-theme($custom-blue-primary, $custom-blue-accent);
+
+@include angular-material-theme($custom-blue-theme);

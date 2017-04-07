@@ -1,0 +1,18 @@
+.articles-action-container {
+	margin: 20px 20px 0 20px;
+}
+
+.articles-buttons-container {
+	display: inline-block;
+	margin: 0 10px 0 10px;
+}
+
+.articles-action-item {
+	margin: 0 5px 5px 0;
+}
+
+.articles-published-date {
+	margin-left: 0.5em;
+	font-size: 0.8em;
+	font-style: italic;
+}

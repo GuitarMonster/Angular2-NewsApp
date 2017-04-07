@@ -1,0 +1,26 @@
+<section>
+    <div class="articles-action-container">
+        <md-input-container class="articles-action-item">
+            <input mdInput type="text" [(ngModel)]="title" placeholder="Filter by title...">
+        </md-input-container>
+        <md-input-container class="articles-action-item">
+            <input mdInput type="text" [(ngModel)]="author" placeholder="Filter by autor...">
+        </md-input-container>
+        <div class="articles-buttons-container">
+            <button md-raised-button class="articles-action-item" color="accent" (click)="sortByNewest();">Sort by newest</button>
+            <button md-raised-button class="articles-action-item" color="accent" (click)="sortByLatest();">Sort by latest</button>
+        </div>
+    </div>
+    <md-nav-list *ngIf="articles">
+        <p md-subheader>Articles</p>
+        <a md-list-item *ngFor="let article of articles | filterBy:'title': title | filterBy: 'author': author" (click)="openDetails(article)">
+            <p md-line>
+                <span>{{article.title}}</span>
+            </p>
+            <p md-line>
+                <span>{{article.author}},</span>
+                <span class="articles-published-date">{{article.publishedDate | date:'medium'}}</span>
+            </p>
+        </a>
+    </md-nav-list>
+</section>
