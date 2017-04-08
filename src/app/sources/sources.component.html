@@ -2,7 +2,7 @@
     <md-sidenav mode="side" opened="true" #sidenav>
         <md-nav-list>
             <h3 md-subheader>Source</h3>
-            <a md-list-item *ngFor="let source of sources" [routerLink]="['/sources', {outlets: {'source':[''+source.id]}}]">
+            <a md-list-item *ngFor="let source of sources" [routerLink]="['/sources/'+source.id]">
                 <img *ngIf="source.urlsToLogos.small" md-list-avatar src="{{source.urlsToLogos.small}}">
                 <p md-line>
                     <span class="source-name">{{source.name}}</span>
@@ -14,6 +14,6 @@
         </md-nav-list>
     </md-sidenav>
     <section>
-        <router-outlet name="source"></router-outlet>
+        <router-outlet></router-outlet>
     </section>
 </md-sidenav-container>

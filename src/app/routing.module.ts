@@ -7,9 +7,9 @@ import { SourcesComponent } from './sources/sources.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: 'sources', pathMatch: 'full' },
-    { path: 'about', component: AboutComponent }, 
+    { path: 'about', component: AboutComponent },
     { path: 'sources', component: SourcesComponent, children: [
-        { path: ':id', component: ArticlesComponent, outlet: 'source' }
+        { path: ':id', component: ArticlesComponent }
     ]}
 ];
 
