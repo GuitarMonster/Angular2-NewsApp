@@ -11,7 +11,9 @@ import { Article } from '../models/article';
     styleUrls: ['./articles.component.css']
 })
 export class ArticlesComponent implements OnInit {
-    private articles: Article[];
+    public articles: Article[];
+    public author: string;
+    public title: string;
 
     constructor(private route: ActivatedRoute, private newsService: NewsService, public dialog: MdDialog) {}
 
@@ -28,14 +30,14 @@ export class ArticlesComponent implements OnInit {
                             if (!article.author) {
                                 article.author = 'Unknown author';
                             }
-                        })
-                    })
-            })
+                        });
+                    });
+            });
     }
 
     openDetails(article) {
-        let dialogRef = this.dialog.open(ArticleDetailsComponent, {
-        	width: '50%',
+        const dialogRef = this.dialog.open(ArticleDetailsComponent, {
+            width: '50%',
             data: article
         });
     }

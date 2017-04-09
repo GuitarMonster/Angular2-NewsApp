@@ -8,12 +8,12 @@ import { Article } from '../models/article';
     styleUrls: ['./article-details.component.css']
 })
 export class ArticleDetailsComponent implements OnInit {
-    private article: Article;
+    public article: Article;
 
     constructor(public dialogRef: MdDialogRef < ArticleDetailsComponent > ) {}
 
     ngOnInit() {
-        this.article = this.dialogRef.config.data;
+        this.article = this.dialogRef._containerInstance.dialogConfig.data;
     }
 
 }

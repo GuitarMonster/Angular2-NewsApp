@@ -1,4 +1,4 @@
-@import '~@angular/material/core/theming/all-theme';
+@import '~@angular/material/_theming';
 @include mat-core();
 
 $custom-blue-primary: mat-palette($mat-blue, A400, A700, 500);

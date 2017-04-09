@@ -10,7 +10,7 @@ export class FilterBy implements PipeTransform {
             value = value.toLowerCase();
             return articles.filter(article => {
                 return article[field].toLowerCase().indexOf(value) > -1;
-            })
+            });
         }
         return articles;
     }

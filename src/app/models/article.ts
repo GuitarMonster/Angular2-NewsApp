@@ -1,9 +1,9 @@
 export class Article {
-    author ? : string;
+    author?: string;
     description: string;
-    publishedAt ? : string;
+    publishedAt?: string;
     title: string;
     url: string;
-    urlToImage ? : string;
-    publishedDate ? : Date;
+    urlToImage?: string;
+    publishedDate?: Date;
 }

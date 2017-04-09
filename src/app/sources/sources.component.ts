@@ -19,6 +19,6 @@ export class SourcesComponent implements OnInit {
         this.newsService.getSources()
         .subscribe(data => {
             this.sources = data.json().sources;
-        })
+        });
     }
 }

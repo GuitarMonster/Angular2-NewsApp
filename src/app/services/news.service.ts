@@ -3,9 +3,9 @@ import { Http } from '@angular/http';
 
 @Injectable()
 export class NewsService {
-    private apiKey: string = '1983aadc64c541f3b442dc880a8bed24';
-    private sourcesUrl: string = 'https://newsapi.org/v1/sources';
-    private articlesUrl: string = 'https://newsapi.org/v1/articles';
+    private apiKey = '1983aadc64c541f3b442dc880a8bed24';
+    private sourcesUrl = 'https://newsapi.org/v1/sources';
+    private articlesUrl = 'https://newsapi.org/v1/articles';
 
     constructor(private http: Http) {}
 
